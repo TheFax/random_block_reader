@@ -33,5 +33,5 @@ while true; do
     echo "Reading $read_count blocks starting from block $start_block"
 
     # Use dd to read the random blocks, specifying the block size
-    dd if="$device" of=/dev/null bs="$block_size" skip="$start_block" count="$read_count" 
+    dd if="$device" of=/dev/null bs="$block_size" skip="$start_block" count="$read_count" status=none
 done
